@@ -3,7 +3,8 @@
   <div class="col-3"></div>
   <div class="col-6 search">
     <input class="searchbar" type="text" v-model="search_input" id="search" placeholder="search here...">
-    <button class="btn btn-danger btn-block" v-on:click="search">Search</button>
+    
+    <button class="btn btn-primary btn-block" v-on:click="search"><i class="fas fa-search"></i></button>
   </div>
   <div class="col-3"></div>
 </div>
@@ -28,12 +29,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.btn-primary{
+  border-radius: 0 10px 10px 0;
+}
+svg{
+  fill:white
+}
 .searchbar {
     width: 500px;
+    border-radius: 10px 0 0 10px;
+    padding: 0px 10px;
 }
 .search {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 h3 {
   margin: 40px 0 0;

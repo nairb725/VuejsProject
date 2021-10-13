@@ -2,13 +2,13 @@
   <div class="home">
     <h1>
       <span class="blue">G</span>
-      <span class="red">l</span>
-      <span class="yellow">o</span>
-      <span class="green">u</span>
+      <span class="green">l</span>
+      <span class="red">o</span>
+      <span class="yellow">u</span>
       <span class="blue">g</span>
-      <span class="red">l</span>
-      <span class="yellow">o</span>
-      <span class="green">u</span>
+      <span class="green">l</span>
+      <span class="red">o</span>
+      <span class="yellow">u</span>
     </h1>
     <HelloWorld />
   </div>
@@ -26,9 +26,16 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@font-face {
+  font-family: "futura TP demi";
+  src: url("../assets/font/futura medium bt.ttf");
+}
+.home{
+  margin-top:15vh
+}
 h1{
   font-size: 150px;
-  font-family:"Product sans", sans-serif
+  font-family:"futura TP demi";
 }
 .blue{
   color:#4285f4;
