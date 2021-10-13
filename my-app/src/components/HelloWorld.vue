@@ -39,6 +39,9 @@ svg{
     width: 500px;
     border-radius: 10px 0 0 10px;
     padding: 0px 10px;
+    border-color: #d4d4d4;
+    border-style:solid;
+    border-right: none;
 }
 .search {
     display: flex;

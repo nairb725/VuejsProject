@@ -36,6 +36,7 @@ export default {
 h1{
   font-size: 150px;
   font-family:"futura TP demi";
+   letter-spacing: -12px;
 }
 .blue{
   color:#4285f4;
