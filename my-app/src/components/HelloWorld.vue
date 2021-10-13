@@ -2,8 +2,8 @@
 <div class="row pt-5">
   <div class="col-3"></div>
   <div class="col-6 search">
-    <input class="searchbar" type="text" id="search" placeholder="search here...">
-    <button class="btn btn-danger btn-block">Search</button>
+    <input class="searchbar" type="text" v-model="search_input" id="search" placeholder="search here...">
+    <button class="btn btn-danger btn-block" v-on:click="search">Search</button>
   </div>
   <div class="col-3"></div>
 </div>
@@ -12,9 +12,17 @@
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+    data(){
+      return{
+        search_input:'',
+      }
+    },
+    methods:{
+      search(){
+      this.$store.commit("setcurrent_search", this.search_input)
+      this.search_input = '';
+      }
+    }
 }
 </script>
 

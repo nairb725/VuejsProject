@@ -10,7 +10,7 @@
       <span class="yellow">o</span>
       <span class="green">u</span>
     </h1>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld />
   </div>
 </template>
 <script>
