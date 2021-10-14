@@ -16,21 +16,24 @@ export default new Vuex.Store({
     },
     setCurrentResult(state, apiResult){
       state.result = apiResult;
-      console.log(state.result);
       router.push("Result")
+    },
+  },
+  getters: {
+    getCurrentResult: state => {
+      return state.result;
     },
   },
   actions: {
     searchResultWithApi(){
-      const API_KEY = 'ce18cc5fc5222e293b85e1dfd0410640';
+      const API_KEY = '953d65e122aea4fbf7653abac7755b74';
       let url = `http://api.serpstack.com/search?access_key=${API_KEY}&type=web&query=${this.state.currentSearch}`;
 
       axios.get(url)
         .then(r=>{
           this.commit('setCurrentResult', r.data);
+          console.log(this.getters.getCurrentResult)
         })
     }
   },
-  modules: {
-  }
 })
