@@ -19,16 +19,17 @@ export default {
   name: 'HelloWorld',
     data(){
       return{
-        search_input:'',
+        search_input: localStorage.getItem("name search"),
       }
     },
     methods:{
       search(){
         this.$store.commit("setCurrentSearch", this.search_input)
         this.$store.dispatch("searchResultWithApi");
+        localStorage.setItem("name search", this.search_input)
         this.search_input = '';
       }
-    }
+    },
 }
 </script>
 
