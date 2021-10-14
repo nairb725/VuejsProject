@@ -1,6 +1,6 @@
 <template>
 <div class="row"> 
-  <div class="col-4">{{LeftPart}}</div>
+  <div class="col-4"><LeftPart /></div>
   <div class="home col-4">
     <h1>
       <router-link class="link-home " to="/">
@@ -12,11 +12,11 @@
           <span class="green">l</span>
           <span class="red">o</span>
           <span class="yellow">u</span>
-          <div>{{MiddlePart}}</div>
+          <div><MiddlePart />}</div>
       </router-link>
       </h1>
   </div>
-  <div class="col-4">{{RightPart}}</div>
+  <div class="col-4"><RightPart /></div>
 </div>
 </template>
 <script>
