@@ -20,8 +20,9 @@ export default {
     },
     methods:{
       search(){
-      this.$store.commit("setcurrent_search", this.search_input)
-      this.search_input = '';
+        this.$store.commit("setCurrentSearch", this.search_input)
+        this.$store.dispatch("searchResultWithApi");
+        this.search_input = '';
       }
     }
 }
