@@ -8,7 +8,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     currentSearch:'',
-    result: [],
+    result: {},
   },
   mutations: {
     setCurrentSearch(state,search){
@@ -16,6 +16,7 @@ export default new Vuex.Store({
     },
     setCurrentResult(state, apiResult){
       state.result = apiResult;
+      console.log(state.result);
     },
   },
   actions: {
@@ -25,7 +26,7 @@ export default new Vuex.Store({
 
       axios.get(url)
         .then(r=>{
-          console.log(r.data);
+          this.commit('setCurrentResult', r.data);
         })
     }
   },
