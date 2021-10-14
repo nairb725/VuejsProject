@@ -1,6 +1,6 @@
 <template>
 <div class="row"> 
-  <div class="col-4">azeaze</div>
+  <div class="col-4">{{LeftPart}}</div>
   <div class="home col-4">
     <h1>
       <router-link class="link-home " to="/">
@@ -12,14 +12,27 @@
           <span class="green">l</span>
           <span class="red">o</span>
           <span class="yellow">u</span>
+          <div>{{MiddlePart}}</div>
       </router-link>
       </h1>
   </div>
-    <div class="col-4">azeaea</div>
+  <div class="col-4">{{RightPart}}</div>
 </div>
 </template>
 <script>
 // @ is an alias to /src
+import LeftPart from '@/components/LeftPart.vue'
+import MiddlePart from '@/components/MiddlePart.vue'
+import RightPart from '@/components/RightPart.vue'
+
+export default {
+  name: 'Home',
+  components: {
+    LeftPart,
+    MiddlePart,
+    RightPart,
+  }
+}
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
