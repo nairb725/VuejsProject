@@ -1,7 +1,7 @@
 <template>
 <div> 
   <Header />
-  <div class=row>
+  <div class="mt-5 row">
     <div class="col-3"><LeftPart /></div>
     <div class="col-6"><MiddlePart /></div>
     <div class="col-3"><RightPart /></div>
