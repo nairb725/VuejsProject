@@ -9,7 +9,7 @@
                         <a href="#">Recherche</a>
                     </div>
 
-                    <hr WIDTH="240">
+                    <hr WIDTH="160">
 
                     <div class="card-r">Question 2 <br>
                         <a href="#">Recherche</a>
