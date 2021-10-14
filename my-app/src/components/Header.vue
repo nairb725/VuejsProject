@@ -19,7 +19,7 @@
 </template>
 
 
-<style>
+<style scoped>
 .navbar{
   display: flex;
   background-color: #ebede7;
