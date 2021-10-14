@@ -1,6 +1,6 @@
 <template>
   <div>
-      <KnowledgeGraph />
+      <KnowledgeGraph v-bind:dataKnowledge="this.$store.result"/>
       <Question />
   </div>
 </template>

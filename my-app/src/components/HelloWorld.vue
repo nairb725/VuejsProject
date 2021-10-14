@@ -4,11 +4,9 @@
   <div class="col-6 search">
     <input class="searchbar" type="text" v-model="search_input" id="search" placeholder="search here...">
     
-    <router-link to="Result">
       <button class="btn btn-primary btn-block" v-on:click="search">
         <i class="fas fa-search"></i>
       </button>
-    </router-link>
   </div>
   <div class="col-3"></div>
 </div>

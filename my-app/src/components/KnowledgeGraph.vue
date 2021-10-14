@@ -2,21 +2,30 @@
     <div class="card">
         <img class="card-img-top" src="../assets/logo.png" alt="Card image cap">
         <div class="card-body">
-            <h4 class="card-title">Titre de la connaissance recherché</h4>
-            <p class="card-text">Description de la Connaissance Description de la Connaissance Description de la Connaissance Description de la Connaissance Description de la Connaissance<br><a href="#">Source de la Connaissance</a></p>
+            <h4 class="card-title">{{dataKnowledge.title}}</h4>
+            <p class="card-text">{{dataKnowledge.description}}<br><a :href="dataKnowledge.source.url">{{dataKnowledge.source.name}}</a></p>
             <hr>
             <h6>Recherche Associée</h6>
             <ol>
-                <li>Nom Recherche</li>
-                <li>Nom Recherche</li>
+                <li v-for="known_att,index in dataKnowledge.known_attributes" v-bind:key="index"><a :href="known_att.link">{{known_att.name}}</a></li>
             </ol>
         </div>
     </div>
 </template>
 
-<script scoped>
+<script>
+//this.getNameLink("https://www.google.com/search?q=programming&oq=programming&aqs=chrome.0.69i59j0i433i512j0i131i433i512j0i433i512j0i512j0i433i512j0i512j69i60.3411j0j7&sourceid=chrome&ie=UTF-8")
 export default {
     name: 'knowledge-graf',
+    props: {
+        dataKnowledge: Array,
+    },
+    methods: {
+        getNameLink(googleLink){
+            let linkName = googleLink.split("&q=").pop()
+            console.log(linkName);
+        }
+    }
 }
 </script>
 

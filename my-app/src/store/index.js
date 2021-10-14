@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
+import router from '@/router'
 
 Vue.use(Vuex)
-
 
 export default new Vuex.Store({
   state: {
@@ -17,6 +17,7 @@ export default new Vuex.Store({
     setCurrentResult(state, apiResult){
       state.result = apiResult;
       console.log(state.result);
+      router.push("Result")
     },
   },
   actions: {
