@@ -1,7 +1,9 @@
 <template>
-  <div class="home">
-    <router-link class="link-home" to="/">
-        <h1>
+<div class="row"> 
+  <div class="col-4">azeaze</div>
+  <div class="home col-4">
+    <h1>
+      <router-link class="link-home " to="/">
           <span class="blue">G</span>
           <span class="green">l</span>
           <span class="red">o</span>
@@ -10,9 +12,11 @@
           <span class="green">l</span>
           <span class="red">o</span>
           <span class="yellow">u</span>
-        </h1>
-        </router-link>
+      </router-link>
+      </h1>
   </div>
+    <div class="col-4">azeaea</div>
+</div>
 </template>
 <script>
 // @ is an alias to /src
