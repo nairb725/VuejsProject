@@ -1,10 +1,10 @@
 <template>
 <div class="home row"> 
-  <div class="col-4"><LeftPart /></div>
-  <div class=" col-4">
+  <div class="col-3"><LeftPart /></div>
+  <div class=" col-6">
   <div><MiddlePart /></div>
   </div>
-  <div class="col-4"><RightPart /></div>
+  <div class="col-3"><RightPart /></div>
 </div>
 </template>
 <script>
