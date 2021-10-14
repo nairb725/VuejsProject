@@ -1,19 +1,33 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
+
 export default new Vuex.Store({
   state: {
-    current_search:''
+    currentSearch:'',
+    result: [],
   },
   mutations: {
-    setcurrent_search(state,search){
-      state.current_search=search
-      console.log(state.current_search)
-    }
+    setCurrentSearch(state,search){
+      state.currentSearch=search;
+    },
+    setCurrentResult(state, apiResult){
+      state.result = apiResult;
+    },
   },
   actions: {
+    searchResultWithApi(){
+      const API_KEY = 'ce18cc5fc5222e293b85e1dfd0410640';
+      let url = `http://api.serpstack.com/search?access_key=${API_KEY}&type=web&query=${this.state.currentSearch}`;
+
+      axios.get(url)
+        .then(r=>{
+          console.log(r.data);
+        })
+    }
   },
   modules: {
   }
