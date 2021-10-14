@@ -1,7 +1,7 @@
 <template>
 <div> 
   <Header />
-  <div class="mt-5 row" v-if="this.$store.result && Object.keys(this.$store.result).lenght!==0 && Object.getPrototypeOf(this.$store.result) !== Object.prototype>
+  <div class="mt-5 row" v-if="this.$store.result && Object.keys(this.$store.result).lenght!==0 && Object.getPrototypeOf(this.$store.result) !== Object.prototype">
     <div class="col-3"><LeftPart /></div>
     <div class="col-6"><MiddlePart /></div>
     <div class="col-3"><RightPart /></div>
