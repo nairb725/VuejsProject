@@ -1,17 +1,22 @@
 <template>
-<div class="home row"> 
-  <div class="col-4"><LeftPart /></div>
-  <div class=" col-4">
-  <div><MiddlePart /></div>
+<div> 
+  <Header />
+  <div class="mt-5 row">
+    <div class="col-3"><LeftPart /></div>
+    <div class="col-6"><MiddlePart /></div>
+    <div class="col-3"><RightPart /></div>
   </div>
-  <div class="col-4"><RightPart /></div>
 </div>
 </template>
 <script>
+
+//v-if="this.$store.result && Object.keys(this.$store.result).lenght!==0 && Object.getPrototypeOf(this.$store.result) !== Object.prototype"
+
 // @ is an alias to /src
 import LeftPart from '@/components/LeftPart.vue'
 import MiddlePart from '@/components/MiddlePart.vue'
 import RightPart from '@/components/RightPart.vue'
+import Header from '@/components/Header.vue'
 
 export default {
   name: 'Result',
@@ -19,6 +24,7 @@ export default {
     LeftPart,
     MiddlePart,
     RightPart,
+    Header,
   }
 }
 </script>
