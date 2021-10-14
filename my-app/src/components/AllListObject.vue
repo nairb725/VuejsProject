@@ -1,10 +1,10 @@
 <template>
     <div class="search">
       <div>
-        <h1 class="title">{{title}}https://openclassrooms.com/forum/sujet/limiter-le-nombre-de-caractere-dans-un-div-width</h1>
-            <h2 class="display_url">{{display_url}}https://www.linguee.fr/anglais-francais/traduction/programming.html</h2>
+        <h1 class="title">{{dataorganic_results[0].title}}https://openclassrooms.com/forum/sujet/limiter-le-nombre-de-caractere-dans-un-div-width</h1>
+            <h2 class="display_url">{{dataorganic_results[0].displayed_url}}https://www.linguee.fr/anglais-francais/traduction/programming.html</h2>
             <h3 class="url">
-                <input class="searchbar" type="text" value="http://localhost:8083/Result">
+                <input class="searchbar" type="text" value="">
                 <button class="btn btn-primary btn-block" v-on:click="search">copy link</button>
             </h3>
             <hr  WIDTH="841">
@@ -12,9 +12,20 @@
   </div>
 </template>
 
+
+
 <script>
 export default {
     name: 'All-List-Object',
+    props:{
+        dataorganic_results : Object,
+    },
+    methods: {
+        getNameLink(googleLink){
+            let linkName = googleLink.split("&q=").pop()
+            console.log(linkName);
+        }
+    }
 }
 </script>
 
