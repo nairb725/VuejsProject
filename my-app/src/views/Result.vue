@@ -1,20 +1,8 @@
 <template>
-<div class="row"> 
+<div class="home row"> 
   <div class="col-4"><LeftPart /></div>
-  <div class="home col-4">
-    <h1>
-      <router-link class="link-home " to="/">
-          <span class="blue">G</span>
-          <span class="green">l</span>
-          <span class="red">o</span>
-          <span class="yellow">u</span>
-          <span class="blue">g</span>
-          <span class="green">l</span>
-          <span class="red">o</span>
-          <span class="yellow">u</span>
-          <div><MiddlePart />}</div>
-      </router-link>
-      </h1>
+  <div class=" col-4">
+  <div><MiddlePart /></div>
   </div>
   <div class="col-4"><RightPart /></div>
 </div>
@@ -26,7 +14,7 @@ import MiddlePart from '@/components/MiddlePart.vue'
 import RightPart from '@/components/RightPart.vue'
 
 export default {
-  name: 'Home',
+  name: 'Result',
   components: {
     LeftPart,
     MiddlePart,
