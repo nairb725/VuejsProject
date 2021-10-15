@@ -1,10 +1,10 @@
 <template>
     <div class="search">
       <div>
-        <h1 class="title">{{dataorganic_results[0].title}}https://openclassrooms.com/forum/sujet/limiter-le-nombre-de-caractere-dans-un-div-width</h1>
-            <h2 class="display_url">{{dataorganic_results[0].displayed_url}}https://www.linguee.fr/anglais-francais/traduction/programming.html</h2>
+        <h1 class="title"><a  :href="dataorganic_results[0].url" target="_blank">{{dataorganic_results[0].title}}</a></h1>
+            <h2 class="display_url">{{dataorganic_results[0].displayed_url}}</h2>
             <h3 class="url">
-                <input class="searchbar" type="text" value="">
+                <input class="searchbar" type="text" :value="dataorganic_results[0].url">
                 <button class="btn btn-primary btn-block" v-on:click="search">copy link</button>
             </h3>
             <hr  WIDTH="841">
