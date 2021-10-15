@@ -5,15 +5,14 @@
                 <span>Autres questions posées</span>
             </h3>
             <div class="card-q">
-                    <div class="card-r">Question 1 <br>
-                        <a href="#">Recherche</a>
-                    </div>
+                <div v-for="question,index in dataQuestion" v-bind:key="index">
+                    {{dataQuestion[0].question}}
+                        <div class="card-r">{{question}}<br>
+                            <a href="dataQuestion.source.url">Recherche</a>
+                        </div>
 
                     <hr WIDTH="160">
-
-                    <div class="card-r">Question 2 <br>
-                        <a href="#">Recherche</a>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -22,6 +21,14 @@
 <script>
 export default {
     name: 'Question',
+    props: {
+        dataQuestion: Object,
+    },
+    methods: {
+        getQuestionLink(questionLink){
+            return questionLink.substring(0, questionLink.indexOf("?"));
+        }
+    }
 }
 </script>
 
