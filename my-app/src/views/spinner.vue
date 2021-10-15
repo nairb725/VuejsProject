@@ -1,6 +1,8 @@
 <template>
-  <div>
-    
+  <div class="search">
+    <div>
+      azeazeaeazeazea
+    </div> 
   </div>
 </template>
 

@@ -3,12 +3,12 @@
         <div>
             <div v-for="known_att,index in dataorganic_results" v-bind:key="index">
                 <div>
-                    <h1 class="title"><a class="titleUrl" :href="known_att.url" target="_blank">{{known_att.title}}</a></h1>
-                    <h2 class="display_url">{{ getNameLink(known_att.displayed_url) }} {{known_att.displayed_url}}</h2> 
-                    <h3 class="url">
+                    <div class="title"><a class="titleUrl" :href="known_att.url" target="_blank">{{known_att.title}}</a></div>
+                    <div class="display_url">{{ getNameLink(known_att.displayed_url) }} {{known_att.displayed_url}}</div> 
+                    <div class="url">
                         <input class="searchbar" type="text" :value="known_att.url">
                         <button class="btn btn-primary btn-block" v-on:click="search">copy link</button>
-                    </h3>
+                    </div>
                     <hr>
                 </div>
             </div>
@@ -34,7 +34,7 @@ export default {
 
 <style scoped>
 .title{
-    font-size: 40px;
+    font-size: 30px;
     margin-left: 50px;
     word-wrap: break-word;
     overflow: hidden;
