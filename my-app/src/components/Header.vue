@@ -5,7 +5,7 @@
           <router-link class="link-home" to="/">
             <i class="fa fa-arrow-left"></i>
           </router-link>
-          <p id="name-search-result">Recherche : {{ name_search }}</p>
+          <p id="name-search-result">Search : {{ name_search }}</p>
         </div>
       </div>
       <h5>
