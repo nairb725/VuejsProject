@@ -1,26 +1,26 @@
 <template>
-   <div class="navbar">
-      <div class="div-header-transparent">
-        <div id="div-header-left-transparent">
+   <div class="navbar row">
+      <div class="col-2">
+        <div class="return-button">
           <router-link class="link-home" to="/">
             <i class="fa fa-arrow-left"></i>
           </router-link>
-          <p id="name-search-result">Search : {{ name_search }}</p>
+          <p>Search : {{ name_search }}</p>
         </div>
       </div>
-      <h5>
-        <span class="blue">G</span>
-        <span class="green">l</span>
-        <span class="red">o</span>
-        <span class="yellow">u</span>
-        <span class="blue">g</span>
-        <span class="green">l</span>
-        <span class="red">o</span>
-        <span class="yellow">u</span>
-      </h5>
-      <div class="div-header-transparent">
+      <div class="col-8">
+        <h5>
+          <span class="blue">G</span>
+          <span class="green">l</span>
+          <span class="red">o</span>
+          <span class="yellow">u</span>
+          <span class="blue">g</span>
+          <span class="green">l</span>
+          <span class="red">o</span>
+          <span class="yellow">u</span>
+        </h5>
       </div>
-      <div class="div-header-transparent">
+      <div class="col-2">
       </div>
     </div>
 </template>
@@ -47,7 +47,6 @@ export default {
 }
 
 .link-home { 
- margin-left: 3rem;
  color: black;
  font-size: 2em;
 }
@@ -58,31 +57,18 @@ h5 {
   font-family:"futura TP demi";
   letter-spacing: -5px;
 }
-
-.div-headertransparent {
-  display: flex;
+p{
+  margin: 0;
 }
 
-#div-header-left-transparent {
+.return-button {
   display: flex;
   align-items: center;
+  justify-content: space-around
 }
 
-#name-search-result {
-  margin-bottom: 0.4rem;
-  margin-left: 2rem;
-}
-
-.blue {
-  color:#4285f4;
-}
-.red {
-  color:#ea4335;
-}
-.yellow {
-  color:#fbbc05;
-}
-.green {
-  color:#34a853
-}
+.blue {color:#4285f4;}
+.red {color:#ea4335;}
+.yellow {color:#fbbc05;}
+.green {color:#34a853}
 </style>
