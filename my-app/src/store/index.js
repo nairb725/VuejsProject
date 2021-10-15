@@ -21,13 +21,12 @@ export default new Vuex.Store({
   },
   getters: {
     getCurrentResult: state => {
-      console.log(state.result.top_stories)
       return state.result;
     },
   },
   actions: {
     searchResultWithApi(){
-      const API_KEY = '6be9e5d4ae2dbf62b5aa526946f0e7c5';
+      const API_KEY = '4a98cf1d2875e450bb3fc62eeb29c049';
       let url = `http://api.serpstack.com/search?access_key=${API_KEY}&type=web&query=${this.state.currentSearch}`;
 
       axios.get(url)
