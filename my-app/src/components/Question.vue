@@ -9,7 +9,9 @@
                         <div class="card-r">{{getQuestionLink(question.question)}}<br>
                             <router-link to="/spinner"><button class="styled" v-on:click="search(getQuestionLink(question.question))">Search</button></router-link>
                         </div>
-                    <hr WIDTH="160">
+                        <div class="mx-4">
+                         <hr WIDTH="160">
+                        </div>
                 </div>
             </div>
         </div>
@@ -49,7 +51,6 @@ hr{
     overflow: visible;
     text-align: center;
     height: 1px;
-    margin-left:100px;
 }
 
 hr:after {
