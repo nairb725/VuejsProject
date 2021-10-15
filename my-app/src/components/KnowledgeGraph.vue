@@ -7,7 +7,7 @@
             <hr>
             <h6>Recherche Associée</h6>
             <ol>
-                <li v-for="known_att,index in dataKnowledge.known_attributes" v-bind:key="index"><div class="flexBetween">{{ getNameLink(known_att.link) }} <a :href="known_att.link">{{known_att.name}}</a></div></li>
+                <li v-for="known_att,index in dataKnowledge.known_attributes" v-bind:key="index"><div class="flexBetween">{{ getNameLink(known_att.link) }}<a :href="known_att.link" target="_blank">{{known_att.name}}</a></div></li>
             </ol>
         </div>
     </div>
