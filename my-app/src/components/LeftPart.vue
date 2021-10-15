@@ -1,7 +1,7 @@
 <template>
   <div>
-      <KnowledgeGraph v-bind:dataKnowledge="dataKnowledge.knowledge_graph"/>
-      <Question v-bind:dataQuestion="dataKnowledge.related_questions"/>
+      <KnowledgeGraph v-bind:dataKnowledge="dataKnowledge.knowledge_graph" v-if="(typeof dataKnowledge.knowledge_graph !== 'undefined')"/>
+      <Question v-bind:dataQuestion="dataKnowledge.related_questions" v-if="(typeof dataKnowledge.related_questions !== 'undefined')"/>
   </div>
 </template>
 

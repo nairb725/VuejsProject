@@ -17,7 +17,12 @@ const routes = [
     // this generates a separate chunk (Result.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "Result" */ '../views/Result.vue')
-  }
+  },
+  {
+    path: '/spinner',
+    name: 'spinner',
+    component: () => import(/* webpackChunkName: "Result" */ '../views/spinner.vue')
+  },
 ]
 
 const router = new VueRouter({

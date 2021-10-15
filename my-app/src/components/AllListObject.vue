@@ -3,12 +3,9 @@
         <div>
             <div v-for="known_att,index in dataorganic_results" v-bind:key="index">
                 <div>
-                    <div class="title"><a class="titleUrl" :href="known_att.url" target="_blank">{{known_att.title}}</a></div>
-                    <div class="display_url">{{ getNameLink(known_att.displayed_url) }} {{known_att.displayed_url}}</div> 
-                    <div class="url">
-                        <input class="searchbar" type="text" :value="known_att.url">
-                        <button class="btn btn-primary btn-block" v-on:click="search">copy link</button>
-                    </div>
+                    <div class="title mx-5"><a class="titleUrl" :href="known_att.url" target="_blank">{{known_att.title}}</a></div>
+                    <div class="display_url mx-5">{{removeLastDisplayUrl(known_att.displayed_url)}}</div> 
+                    <div class="url mx-5"><input class="searchbar" type="text" :value="known_att.url" readonly></div>
                     <hr>
                 </div>
             </div>
@@ -24,9 +21,11 @@ export default {
         dataorganic_results : Array,
     },
     methods: {
-        getNameLink(googleLink){
-            let linkName = googleLink.split("&q=").pop()
-            return linkName.substring(0, linkName.indexOf("&")).replace("+", " ");
+        removeLastDisplayUrl(url){
+            return 'http' + url.split('http').pop()
+        },
+        getPosition(string, subString, index) {
+            return string.split(subString, index).join(subString).length;
         }
     }
 }
@@ -34,12 +33,10 @@ export default {
 
 <style scoped>
 .title{
-    font-size: 30px;
-    margin-left: 50px;
+    font-size: 40px;
     word-wrap: break-word;
     overflow: hidden;
-    white-space: nowrap;
-   
+    white-space: nowrap;  
 }
 .titleUrl{
 text-decoration: none;
@@ -51,11 +48,9 @@ text-decoration: underline black;
 }
 .display_url{
     font-size: 15px;
-    margin-left: 50px;
 }
 .url{
     font-size: 20px;
-    margin-left: 50px;
 }
 .search{
     text-align: left;
@@ -65,17 +60,15 @@ text-decoration: underline black;
     border-radius: 0 10px 10px 0;
 }
 .searchbar{
-width: 85%;
-border-radius: 10px 0 0 10px;
-border-color: #d4d4d4;
-border-style:solid;
-border-right: none;
-padding-top: 4px;
-padding-bottom: 7px;
-padding-left:10px;
-background-color: #eeeeee;
-color: black;
-font-style:italic;
+    width: 100%;
+    border-radius: 10px;
+    border-color: #d4d4d4;
+    border-style:solid;
+    padding-top: 4px;
+    padding-bottom: 7px;
+    padding-left:10px;
+    background-color: #eeeeee;
+    font-style:italic;
 }
 
 </style>
