@@ -12,11 +12,10 @@ export default {
 
 <style scoped>
 .spinner {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-color: #333;
-
-  margin: 300px auto;
+  margin: 1100px auto;
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
   animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
