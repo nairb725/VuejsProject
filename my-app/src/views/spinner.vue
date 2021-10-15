@@ -15,7 +15,6 @@ export default {
   width: 100px;
   height: 100px;
   background-color: #333;
-
   margin: 300px auto;
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
   animation: sk-rotateplane 1.2s infinite ease-in-out;
