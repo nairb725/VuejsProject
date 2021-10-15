@@ -2,12 +2,12 @@
     <div class="card">
         <div class="card-body">
             <h3 class="card-title">
-                <span>Autres questions posées</span>
+                <span>Other asked questions </span>
             </h3>
             <div class="card-q">
                 <div v-for="question,index in dataQuestion" v-bind:key="index">
                         <div class="card-r">{{getQuestionLink(question.question)}}<br>
-                            <router-link to="/spinner"><button v-on:click="search(getQuestionLink(question.question))">Recherche</button></router-link>
+                            <router-link to="/spinner"><button class="styled" v-on:click="search(getQuestionLink(question.question))">Search</button></router-link>
                         </div>
                     <hr WIDTH="160">
                 </div>
@@ -35,20 +35,21 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .card{
     max-width: 320px;
     margin-left: 1em;
     text-align: start;
 }
 
-.hr{
+hr{
     border: none;
-    border-top: 3px double #333;
-    color: #333;
+    border-top: 1px double #333;
+    color: rgb(61, 61, 61);
     overflow: visible;
     text-align: center;
-    height: 5px;
+    height: 1px;
+    margin-left:100px;
 }
 
 hr:after {
@@ -62,6 +63,17 @@ hr:after {
 }
 .card{
     margin-bottom: 1rem;
+}
+.styled {
+    width: 111px;
+     height: 21px;
+     font-size: 16px;
+     text-align: center;
+     line-height: 19px;
+     color :rgba(255,255,255,0.9);
+     border-radius: 50px;
+     background :rgb(19, 99, 248);
+     border: none;
 }
 
 </style>
