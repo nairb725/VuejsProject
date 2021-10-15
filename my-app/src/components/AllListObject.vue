@@ -9,7 +9,7 @@
                         <input class="searchbar" type="text" :value="known_att.url">
                         <button class="btn btn-primary btn-block" v-on:click="search">copy link</button>
                     </h3>
-                    <hr width="1250">
+                    <hr>
                 </div>
             </div>
         </div>
@@ -48,6 +48,7 @@ color : black;
 }
 .titleUrl:hover{
 background-color: #eaeaeaad;
+text-decoration: underline black;
 }
 .display_url{
     font-size: 15px;
