@@ -26,7 +26,7 @@ export default new Vuex.Store({
   },
   actions: {
     searchResultWithApi(){
-      const API_KEY = '953d65e122aea4fbf7653abac7755b74';
+      const API_KEY = '6be9e5d4ae2dbf62b5aa526946f0e7c5';
       let url = `http://api.serpstack.com/search?access_key=${API_KEY}&type=web&query=${this.state.currentSearch}`;
 
       axios.get(url)

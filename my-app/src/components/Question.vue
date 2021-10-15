@@ -63,4 +63,5 @@ hr:after {
 .card{
     margin-bottom: 1rem;
 }
+
 </style>
