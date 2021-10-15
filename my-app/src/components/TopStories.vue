@@ -1,6 +1,6 @@
 <template>
     <div id="top-stories">
-        <div class="card-body" v-for="(tab, index) in stories" :key="index">    
+        <div class="card" v-for="(tab, index) in stories" :key="index">    
             <p class="name_top-stories"><a :href="getLink(tab.url)" target="_blank">{{ tab.title }}</a></p>
         </div>
     </div>
@@ -21,8 +21,8 @@ export default {
 }
 </script>
 
-<style>
-.card-body {
+<style scoped>
+.card {
     margin-top: 2.5rem;
     border: 1px solid rgb(0, 0,0 ,.125);
     width: 95%;
