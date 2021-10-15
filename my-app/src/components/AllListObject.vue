@@ -1,14 +1,9 @@
 <template>
     <div class="search">
-        <div>
-            <div v-for="known_att,index in dataorganic_results" v-bind:key="index">
-                <div>
-                    <div class="title mx-5"><a class="titleUrl" :href="known_att.url" target="_blank">{{known_att.title}}</a></div>
-                    <div class="display_url mx-5">{{removeLastDisplayUrl(known_att.displayed_url)}}</div> 
-                    <div class="url mx-5"><input class="searchbar" type="text" :value="known_att.url" readonly></div>
-                    <hr>
-                </div>
-            </div>
+        <div class="mb-5" v-for="known_att,index in dataorganic_results" v-bind:key="index">
+            <div class="url mx-5">{{removeLastDisplayUrl(known_att.displayed_url)}}</div> 
+            <div class="title mx-5"><a class="titleUrl" :href="known_att.url" target="_blank">{{known_att.title}}</a></div>
+            <div class="url mx-5"><input class="searchbar py-1 px-2" type="text" :value="known_att.url" readonly></div>
         </div>
     </div>
 </template>
@@ -22,10 +17,8 @@ export default {
     },
     methods: {
         removeLastDisplayUrl(url){
+            //sometimes the api gave 2 displayed_url in one string
             return 'http' + url.split('http').pop()
-        },
-        getPosition(string, subString, index) {
-            return string.split(subString, index).join(subString).length;
         }
     }
 }
@@ -33,28 +26,24 @@ export default {
 
 <style scoped>
 .title{
-    font-size: 40px;
+    font-size: 25px;
     word-wrap: break-word;
     overflow: hidden;
     white-space: nowrap;  
 }
 .titleUrl{
-text-decoration: none;
-color : black;
+    text-decoration: none;
+    color : black;
 }
 .titleUrl:hover{
-background-color: #eaeaeaad;
-text-decoration: underline black;
-}
-.display_url{
-    font-size: 15px;
+    text-decoration: underline black;
 }
 .url{
-    font-size: 20px;
+    font-size: 12px;
+    color: #4285f4;
 }
 .search{
     text-align: left;
-    margin-bottom: 50px;
 }
 .btn-primary{
     border-radius: 0 10px 10px 0;
@@ -64,9 +53,6 @@ text-decoration: underline black;
     border-radius: 10px;
     border-color: #d4d4d4;
     border-style:solid;
-    padding-top: 4px;
-    padding-bottom: 7px;
-    padding-left:10px;
     background-color: #eeeeee;
     font-style:italic;
 }
