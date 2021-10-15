@@ -52,10 +52,6 @@ export default {
  font-size: 2em;
 }
 
-#directional {
-  
-}
-
 h5 {
   display: block;
   font-size: 50px;

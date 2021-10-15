@@ -6,11 +6,9 @@
             </h3>
             <div class="card-q">
                 <div v-for="question,index in dataQuestion" v-bind:key="index">
-                    {{dataQuestion[0].question}}
-                        <div class="card-r">{{question}}<br>
-                            <a href="dataQuestion.source.url">Recherche</a>
+                        <div class="card-r">{{getQuestionLink(question.question)}}<br>
+                            <router-link to="/spinner"><button v-on:click="search(getQuestionLink(question.question))">Recherche</button></router-link>
                         </div>
-
                     <hr WIDTH="160">
                 </div>
             </div>
@@ -22,11 +20,16 @@
 export default {
     name: 'Question',
     props: {
-        dataQuestion: Object,
+        dataQuestion: Array,
     },
     methods: {
         getQuestionLink(questionLink){
-            return questionLink.substring(0, questionLink.indexOf("?"));
+            return questionLink.substring(0, questionLink.indexOf("?")+1);
+        },
+        search(research){
+            this.$store.commit("setCurrentSearch", research)
+            this.$store.dispatch("searchResultWithApi");
+            localStorage.setItem("name search", research)
         }
     }
 }
