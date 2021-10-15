@@ -1,15 +1,19 @@
 <template>
     <div class="search">
-      <div>
-        <h1 class="title"><a  :href="dataorganic_results[0].url" target="_blank">{{dataorganic_results[0].title}}</a></h1>
-            <h2 class="display_url">{{dataorganic_results[0].displayed_url}}</h2>
-            <h3 class="url">
-                <input class="searchbar" type="text" :value="dataorganic_results[0].url">
-                <button class="btn btn-primary btn-block" v-on:click="search">copy link</button>
-            </h3>
-            <hr  WIDTH="841">
+        <div>
+            <div v-for="known_att,index in dataorganic_results" v-bind:key="index">
+                <div>
+                    <h1 class="title"><a class="titleUrl" :href="known_att.url" target="_blank">{{known_att.title}}</a></h1>
+                    <h2 class="display_url">{{ getNameLink(known_att.displayed_url) }} </h2>
+                    <h3 class="url">
+                        <input class="searchbar" type="text" :value="known_att.url">
+                        <button class="btn btn-primary btn-block" v-on:click="search">copy link</button>
+                    </h3>
+                    <hr width="1250">
+                </div>
+            </div>
         </div>
-  </div>
+    </div>
 </template>
 
 
@@ -23,7 +27,7 @@ export default {
     methods: {
         getNameLink(googleLink){
             let linkName = googleLink.split("&q=").pop()
-            console.log(linkName);
+            return linkName.substring(0, linkName.indexOf("&")).replace("+", " ");
         }
     }
 }
@@ -36,7 +40,14 @@ export default {
     word-wrap: break-word;
     overflow: hidden;
     white-space: nowrap;
-    
+   
+}
+.titleUrl{
+text-decoration: none;
+color : black;
+}
+.titleUrl:hover{
+background-color: #eaeaeaad;
 }
 .display_url{
     font-size: 15px;

@@ -1,25 +1,6 @@
 <template>
   <div>
       <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results"/>
   </div>
 
 
