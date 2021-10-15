@@ -1,7 +1,7 @@
 <template>
   <div>
       <KnowledgeGraph v-bind:dataKnowledge="dataKnowledge.knowledge_graph"/>
-      <Question />
+      <Question v-bind:dataQuestion="dataQuestion.related_question"/>
   </div>
 </template>
 
@@ -12,6 +12,7 @@ export default {
     name: 'LeftPart',
     data(){return{
         dataKnowledge: this.$store.getters.getCurrentResult,
+        dataQuestion: this.$store.getters.getCurrentResult,
     }},
     components: {
         KnowledgeGraph,
