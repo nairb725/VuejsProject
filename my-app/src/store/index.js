@@ -21,6 +21,7 @@ export default new Vuex.Store({
   },
   getters: {
     getCurrentResult: state => {
+      console.log(state.result.top_stories)
       return state.result;
     },
   },
