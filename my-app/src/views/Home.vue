@@ -38,13 +38,8 @@ h1{
   font-family:"futura TP demi";
    letter-spacing: -12px;
 }
-.blue{
-  color:#4285f4;
-}
-.red{
-  color:#ea4335;
-}
-
+.blue{color:#4285f4;}
+.red{color:#ea4335;}
 .yellow{color:#fbbc05;}
 .green{color:#34a853}
 </style>
