@@ -1,8 +1,13 @@
 <template>
    <div class="navbar">
-      <router-link class="link-home" to="/">
-        <i class="fa fa-arrow-left"></i>
-      </router-link>
+      <div class="div-header-transparent">
+        <div id="div-header-left-transparent">
+          <router-link class="link-home" to="/">
+            <i class="fa fa-arrow-left"></i>
+          </router-link>
+          <p id="name-search-result">Search : {{ name_search }}</p>
+        </div>
+      </div>
       <h5>
         <span class="blue">G</span>
         <span class="green">l</span>
@@ -13,11 +18,24 @@
         <span class="red">o</span>
         <span class="yellow">u</span>
       </h5>
-      <div id="div-header-right-transparent">
+      <div class="div-header-transparent">
+      </div>
+      <div class="div-header-transparent">
       </div>
     </div>
 </template>
 
+
+<script>
+export default {
+  name: "Header",
+  data() {
+    return {
+      name_search: localStorage.getItem("name search")
+    }
+  }
+}
+</script>
 
 <style scoped>
 .navbar{
@@ -34,6 +52,10 @@
  font-size: 2em;
 }
 
+#directional {
+  
+}
+
 h5 {
   display: block;
   font-size: 50px;
@@ -41,8 +63,18 @@ h5 {
   letter-spacing: -5px;
 }
 
-#div-header-right-transparent {
-  margin-left: 8em
+.div-headertransparent {
+  display: flex;
+}
+
+#div-header-left-transparent {
+  display: flex;
+  align-items: center;
+}
+
+#name-search-result {
+  margin-bottom: 0.4rem;
+  margin-left: 2rem;
 }
 
 .blue {

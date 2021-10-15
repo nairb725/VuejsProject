@@ -1,29 +1,32 @@
 <template>
     <div class="search">
-      <div>
-        <h1 class="title">{{dataorganic_results[0].title}}https://openclassrooms.com/forum/sujet/limiter-le-nombre-de-caractere-dans-un-div-width</h1>
-            <h2 class="display_url">{{dataorganic_results[0].displayed_url}}https://www.linguee.fr/anglais-francais/traduction/programming.html</h2>
-            <h3 class="url">
-                <input class="searchbar" type="text" value="">
-                <button class="btn btn-primary btn-block" v-on:click="search">copy link</button>
-            </h3>
-            <hr  WIDTH="841">
+        <div>
+            <div v-for="known_att,index in dataorganic_results" v-bind:key="index">
+                <div>
+                    <h1 class="title"><a class="titleUrl" :href="known_att.url" target="_blank">{{known_att.title}}</a></h1>
+                    <h2 class="display_url">{{ getNameLink(known_att.displayed_url) }} {{known_att.displayed_url}}</h2> 
+                    <h3 class="url">
+                        <input class="searchbar" type="text" :value="known_att.url">
+                        <button class="btn btn-primary btn-block" v-on:click="search">copy link</button>
+                    </h3>
+                    <hr>
+                </div>
+            </div>
         </div>
-  </div>
+    </div>
 </template>
-
 
 
 <script>
 export default {
     name: 'All-List-Object',
     props:{
-        dataorganic_results : Object,
+        dataorganic_results : Array,
     },
     methods: {
         getNameLink(googleLink){
             let linkName = googleLink.split("&q=").pop()
-            console.log(linkName);
+            return linkName.substring(0, linkName.indexOf("&")).replace("+", " ");
         }
     }
 }
@@ -36,7 +39,15 @@ export default {
     word-wrap: break-word;
     overflow: hidden;
     white-space: nowrap;
-    
+   
+}
+.titleUrl{
+text-decoration: none;
+color : black;
+}
+.titleUrl:hover{
+background-color: #eaeaeaad;
+text-decoration: underline black;
 }
 .display_url{
     font-size: 15px;
