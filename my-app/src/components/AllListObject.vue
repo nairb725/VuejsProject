@@ -4,7 +4,7 @@
             <div v-for="known_att,index in dataorganic_results" v-bind:key="index">
                 <div>
                     <h1 class="title"><a class="titleUrl" :href="known_att.url" target="_blank">{{known_att.title}}</a></h1>
-                    <h2 class="display_url">{{ getNameLink(known_att.displayed_url) }} </h2>
+                    <h2 class="display_url">{{ getNameLink(known_att.displayed_url) }} {{known_att.displayed_url}}</h2> 
                     <h3 class="url">
                         <input class="searchbar" type="text" :value="known_att.url">
                         <button class="btn btn-primary btn-block" v-on:click="search">copy link</button>
@@ -17,12 +17,11 @@
 </template>
 
 
-
 <script>
 export default {
     name: 'All-List-Object',
     props:{
-        dataorganic_results : Object,
+        dataorganic_results : Array,
     },
     methods: {
         getNameLink(googleLink){
