@@ -1,14 +1,9 @@
 <template>
     <div class="search">
-        <div>
-            <div v-for="known_att,index in dataorganic_results" v-bind:key="index">
-                <div>
-                    <div class="url mx-5">{{removeLastDisplayUrl(known_att.displayed_url)}}</div> 
-                    <div class="title mx-5"><a class="titleUrl" :href="known_att.url" target="_blank">{{known_att.title}}</a></div>
-                    <div class="url mx-5"><input class="searchbar py-1 px-2" type="text" :value="known_att.url" readonly></div>
-                    <hr>
-                </div>
-            </div>
+        <div class="mb-5" v-for="known_att,index in dataorganic_results" v-bind:key="index">
+            <div class="url mx-5">{{removeLastDisplayUrl(known_att.displayed_url)}}</div> 
+            <div class="title mx-5"><a class="titleUrl" :href="known_att.url" target="_blank">{{known_att.title}}</a></div>
+            <div class="url mx-5"><input class="searchbar py-1 px-2" type="text" :value="known_att.url" readonly></div>
         </div>
     </div>
 </template>
@@ -41,15 +36,14 @@ export default {
     color : black;
 }
 .titleUrl:hover{
-    background-color: #eaeaeaad;
     text-decoration: underline black;
 }
 .url{
     font-size: 12px;
+    color: #4285f4;
 }
 .search{
     text-align: left;
-    margin-bottom: 50px;
 }
 .btn-primary{
     border-radius: 0 10px 10px 0;
