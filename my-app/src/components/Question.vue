@@ -41,6 +41,7 @@ export default {
 .card{
     max-width: 320px;
     margin-left: 1em;
+    margin-top: 14px;
     text-align: start;
 }
 
