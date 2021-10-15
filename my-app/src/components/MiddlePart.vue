@@ -1,7 +1,7 @@
 <template>
   <div>
-      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results" v-if="(typeof dataorganic_results.organic_results !== 'undefined') "/>
-      <div v-if="(typeof dataorganic_results.organic_results == 'undefined') ">
+      <AllListObject v-bind:dataorganic_results="dataorganic_results.organic_results" v-if="(typeof dataorganic_results.organic_results !== 'undefined') || (dataorganic_results.organic_results.length > 0)"/>
+      <div v-if="(typeof dataorganic_results.organic_results == 'undefined') || (dataorganic_results.organic_results.length == 0)">
           Aucun resultat trouvé.
       </div>
   </div>
